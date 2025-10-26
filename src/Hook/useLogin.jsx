@@ -4,19 +4,23 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authentication";
 
 export default function useLogin() {
-    // définition des variables d'état
+    // Définition des variables d'état pour chaque champs, etat initial = chaîne de caractère vide
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    // Variable d'état qui gérera le message d'erreur à afficher
     const [message, setMessage] = useState("");
-
+    /**
+     * On fait appel à notre fonction useNavigate pour permettre la redirection
+     * @link https://api.reactrouter.com/v7/functions/react_router.useNavigate.html
+     */
     const navigate = useNavigate()
 
+    // Utilisation de la fonction login contenu dans notre contexte d'authentification
     const { login } = useContext(AuthContext)
-
-    // handle pour la soumission du formulaire
+    // Handler (événement) lors de la soumission du formulaire
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // conditions à la soumission pour être connecté
+        // Conditions à la soumission pour être connecté
         try {
             const payload = {
                 email,

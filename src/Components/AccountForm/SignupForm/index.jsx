@@ -3,8 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import useSignup from "../../../Hook/useSignup";
 
 export default function SignupForm() {
-  // définition des variables d'état avec pour état initial des chaînes de caractères vides
-const { username, setUsername, email, setEmail, password, setPassword, confirmPassword, setConfirmPassword, message, handleSubmit } = useSignup()
+    // définition des variables d'état avec pour état initial des chaînes de caractères vides
+    const { username, setUsername, email, setEmail, password, setPassword, confirmPassword, setConfirmPassword, message, handleSubmit } = useSignup()
 
     /**
      * Initialisation de variable d'état
@@ -19,7 +19,7 @@ const { username, setUsername, email, setEmail, password, setPassword, confirmPa
     })
 
     /**
-     * Handler permettant la gestion des variable d'état au focus d'un champs
+     * Handler permettant la gestion des variables d'état au focus d'un champs
      * @param {string} field - Chaîne de caractère représentant la clé de notre objet stocké dans notre variable d'état
      */
     const handleFocus = (field) => {
@@ -29,7 +29,7 @@ const { username, setUsername, email, setEmail, password, setPassword, confirmPa
          */
         setFocusState((prev) => ({
             /**
-             * Utilisation du spread operator pour récupèrer cette objet
+             * Utilisation du spread operator pour récupèrer cet objet
              * Et mettre à jour une première fois notre variable d'état
              * Nous indiquerons ensuite qu'il faudra asigner la valeur ``true``
              * A la clé [field] de notre objet 
@@ -57,7 +57,8 @@ const { username, setUsername, email, setEmail, password, setPassword, confirmPa
 
     const [searchParams] = useSearchParams();
     // On vérifie si le paramètre de l'URL "edit" est égal à "true"
-    // Cela nous permet de savoir si nous sommes en mode édition ou en mode création de compte
+    // Cela nous permet de savoir si nous sommes en train de modifier un compte déjà existant
+    // On d'en céer un nouveau
     const isEditMode = searchParams.get("edit") === "true";
 
     return (

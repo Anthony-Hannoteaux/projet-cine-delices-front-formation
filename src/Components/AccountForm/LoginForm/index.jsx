@@ -2,15 +2,18 @@ import { useState } from "react";
 import useLogin from "../../../Hook/useLogin";
 
 export default function LoginForm() {
+	// On importe nos variables d'état ainsi que nos handler de notre hook personnalisé
 	const { email, setEmail, password, setPassword, message, handleSubmit } = useLogin();
-
+		/**
+		 * Variable d'état qui permet de détecter si le focus sur le champs est effectué
+		 * Par défaut, valeur à false
+		 */
 		const [focusState, setFocusState] = useState({
 			email: false,
 			password: false,
 		})
-	
 		/**
-		 * Handler permettant la gestion des variable d'état au focus d'un champs
+		 * Handler permettant la gestion des variable d'état au focus de nos champs
 		 * @param {string} field - Chaîne de caractère représentant la clé de notre objet stocké dans notre variable d'état
 		 */
 		const handleFocus = (field) => {
@@ -18,13 +21,16 @@ export default function LoginForm() {
 				...prev, [field]: true
 			}))
 		}
-
+		// Handler lors de la perte de focus de nos champs
 		const handleBlur = (field) => {
 			setFocusState((prev) => ({
 				...prev, [field]: false
 			}))
 		}
-
+		/**
+		 * On affecte la valeur correspondante (true ou false)
+		 * En fonction du résultat du handler
+		 */
 		const isEmailActive = focusState.email;
 		const isPasswordActive = focusState.password;
 
@@ -34,7 +40,7 @@ export default function LoginForm() {
 			method="POST"
 			onSubmit={handleSubmit}
 		>
-			{/* Si message est true, alors on l'affiche */}
+			{/* Si la valeur de "message" est "true", alors on l'affiche */}
 			{message && <p className="error__indication">{message}</p>}
 			{/* Ajout d'un fieldset, pour mieux structurer sémantiquement le formulaire */}
 			<fieldset>

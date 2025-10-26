@@ -1,4 +1,10 @@
+/**
+ * Import des méthodes de react-router-dom:
+ * BrowserRouter que l'on renommera Router
+ * Routes et Route
+ */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Import des composants renvoyant nos rendues
 import Home from "../pages/Home";
 import RecipeDetail from "../pages/Food/RecipeDetail";
 import Recipes from "../pages/Food/Recipes";
@@ -7,8 +13,6 @@ import MoviesSeries from "../pages/Cinema/MoviesSeries";
 import MovieSeriesDetail from "../pages/Cinema/MovieSeriesDetail";
 import Login from "../pages/Account/Login";
 import Signup from "../pages/Account/Signup";
-/*import ForgotPassword from "../pages/ForgotPassword";
-import ResetPassword from "../pages/ResetPassword";*/
 import MyAccount from "../pages/Account/MyAccount";
 import MyRecipes from "../pages/Account/MyRecipes";
 import Contact from "../pages/Contact";
@@ -16,13 +20,15 @@ import AboutUs from "../pages/AboutUs";
 import LegalNotice from "../pages/LegalNotice";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsAndConditions from "../pages/TermsAndConditions";
-// import NotFound from "../pages/NotFound"; // Page 404*/
 
 export default function AppRouter() {
   return (
+    // Composant principale (BrowserRouter)
     <Router>
+      {/* Conteneur de toutes les routes */}
       <Routes>
         {/* Pages principales */}
+        {/* Route permet d'associer une url à un composant  */}
         <Route path="/" element={<Home />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/recipes/:recipeId" element={<RecipeDetail />} /> 

@@ -1,10 +1,10 @@
-//Couleurs & Thèmes
-$primary: #3ca0c8; // ou #4fb8dc, #2f8ead selon l'intensité que tu veux
+// Couleurs principales
+$primary: #3ca0c8;
 $bg-dark: #07202A;
 $bg-light: #18576E;
 $background: linear-gradient(to bottom, $bg-dark, $bg-light);
 $bg-section: #2a2a2a;
-
+// Couleurs des textes
 $text-light: #f8f8f8;
 $text-secondary: #c0c0c0;
 
@@ -16,6 +16,6 @@ $white: #ffffff;
 $black: #000000;
 $red: #6b0d0d;
 
-//Typo
+// Typographie
 $font-main: 'Raleway', sans-serif;
 $font-secondary: 'Inter', sans-serif;
