@@ -1,0 +1,50 @@
+@use "../../styles/vars";
+@use '../../styles/mixins' as *;
+
+.footer {
+  background: vars.$bg-dark;
+  font-family: vars.$font-secondary;
+  text-align: center;
+  font-size: 15px;
+  padding: 2rem 0rem;
+
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  &__link {
+    color: vars.$text-light;
+
+    &:hover {
+      text-decoration: none;
+      color: vars.$text-secondary;
+    }
+  }
+
+  @include medium {
+    font-size: 1rem;
+
+    &__list {
+      gap: 2rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.05rem;
+  }
+
+  @include large {
+    padding: 3rem 2rem;
+
+    &__list {
+      gap: 3rem;
+    }
+  }
+}
