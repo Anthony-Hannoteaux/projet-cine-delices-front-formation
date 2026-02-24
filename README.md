@@ -123,7 +123,7 @@ Configurer le fichier `.env` à partir de `.env.example`.
 ```bash
 cd projet-cine-delices-front-formation
 npm install
-npm run dev
+npm start
 ```
 
 ---
