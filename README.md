@@ -142,6 +142,6 @@ https://github.com/Anthony-Hannoteaux/projet-cine-delices-back-formation
 
 Le dossier de projet complet (incluant wireframes, modélisation BDD, spécifications) est disponible ici :
 
-[Dossier Projet - Titre Professionnel DWWM](docs/Dossier Projet DWWM - Hannoteaux Anthony.pdf)
+[Dossier Projet - Titre Professionnel DWWM](<docs/Dossier Projet DWWM - Hannoteaux Anthony.pdf>)
 
-[Annexes](docs/Annexes - Dossier Projet DWWM - Hannoteaux Anthony.pdf)
+[Annexes](<docs/Annexes - Dossier Projet DWWM - Hannoteaux Anthony.pdf>)
